@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\API.Models\API.Models.csproj" />
   </ItemGroup>
 
 </Project>

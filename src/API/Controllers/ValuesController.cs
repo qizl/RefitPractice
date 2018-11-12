@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using API.Models;
 using Microsoft.AspNetCore.Mvc;
-using Models;
+using System;
+using System.Collections.Generic;
 
 namespace API.Controllers
 {
@@ -20,7 +18,7 @@ namespace API.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public User Get(int id) => new User() { Id = id };
+        public User Get(int id, string name, DateTime birth) => new User() { Id = id, Name = name, Birthday = birth };
 
         // POST api/values
         [HttpPost]
