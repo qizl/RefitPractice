@@ -28,5 +28,18 @@ namespace API.Tests
             var r = service.GetUserByParas(1, p).Result as User;
             Assert.IsTrue(r != null && r.Id == 1 && r.Name == p.Name);
         }
+
+        [TestMethod]
+        public void TestCreate()
+        {
+            var service = RestService.For<IUserApi>("http://localhost:51018");
+            var p = new Paras()
+            {
+                Name = "pan",
+                Birthday = new DateTime(1995, 1, 1)
+            };
+            var r = service.Create(p).Result;
+            Assert.IsTrue(r != null && r.Id == 1 && r.Name == p.Name);
+        }
     }
 }

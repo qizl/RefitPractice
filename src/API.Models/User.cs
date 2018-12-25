@@ -24,5 +24,7 @@ namespace API.Models
         Task<User> GetUser(int id, string name, [AliasAs("birth")]DateTime birthday);
         [Get("/api/values/{id}")]
         Task<User> GetUserByParas(int id, Paras p);
+        [Post("/api/values")]
+        Task<User> Create(Paras p);
     }
 }

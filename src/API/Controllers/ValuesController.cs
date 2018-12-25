@@ -22,9 +22,7 @@ namespace API.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+        public User Post([FromBody]Paras p) => new Models.User() { Id = 1, Name = p.Name, Birthday = p.Birthday };
 
         // PUT api/values/5
         [HttpPut("{id}")]
